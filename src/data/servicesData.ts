@@ -158,7 +158,7 @@ const servicesData: ServicesData = {
       {
         name: 'Facial Clean-up (Watermelon / Strawberry)',
         description: 'A burst of hydration/Antioxidant-rich cleanse for tired, stressed skin.',
-        image: '/services/Facials – Clean ups.webp',
+        image: '/services/Facials – Clean ups2.webp',
         variants: [{ duration: '30', price: '₹1200' }]
       },
       {
@@ -170,7 +170,7 @@ const servicesData: ServicesData = {
       {
         name: 'Rejuvenating\n (All skin types)',
         description: 'Reveal your skin’s natural radiance through meticulous care that enhances texture, tone, and vitality.',
-        image: '/services/Facials – Rejuvenating.webp',
+        image: '/services/Facials – Rejuvenating2.jpg',
         variants: [{ duration: '60', price: '₹1700' }]
       },
       {

@@ -88,7 +88,7 @@ const About: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <h2 className="text-4xl md:text-5xl font-montserrat font-light text-gray-900 mb-8">
-              Aroma Embodies Wellness Where Healing Meets Harmony.            </h2>
+              Aroma Embodies Wellness Where Healing Meets Harmony            </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
               At aroma spa, we believe in the transformative power of mindful therapies and conscious self-care. 
               Our sanctuary provides a space where you can disconnect from the world's chaos and reconnect with 
@@ -108,7 +108,7 @@ const About: React.FC = () => {
       <section className="py-20 bg-beige">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-           <h2 className="text-4xl font-montserrat font-light text-gray-900 mb-6">
+           <h2 className="text-5xl font-montserrat font-light text-gray-900 mb-6">
               Our Core Values
             </h2>
             <p className="text-lg text-gray-600">
@@ -148,7 +148,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="fade-in-left">
               <div>
-                <h2 className="text-4xl font-montserrat font-light text-gray-900 mb-6">
+                <h2 className="text-5xl font-montserrat font-light text-gray-900 mb-6">
                   Our Journey
                 </h2>
                 <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -303,7 +303,7 @@ const About: React.FC = () => {
       <section className="py-20 bg-sage text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-montserrat font-light mb-6">
+            <h2 className="text-5xl font-montserrat font-light mb-6">
               Our Location
             </h2>
             {/* <p className="text-xl text-white/90">
@@ -368,7 +368,7 @@ const About: React.FC = () => {
         <AnimatedSection>
               <div className="space-y-6">
                 <div className="bg-white rounded-xl shadow-lg p-6">
-                  <h3 className="font-montserrat text-xl font-semibold mb-3 text-gray-500">Aroma spa</h3>
+                  <h3 className="font-montserrat text-xl font-semibold mb-3 text-gray-500">Aroma Spa</h3>
                   <p className="text-gray-600 mb-3">5ht Floor,Above Fabindia Store,Opp. Aparna Sarovar Apartments, Nallagandla Main Road,<br />Hyderabad, Telangana, 500046</p>
                   <div className="flex items-center text-sm text-gray-500 mb-2">
                     <Clock className="h-4 w-4 mr-2" />
@@ -412,7 +412,7 @@ const About: React.FC = () => {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl font-montserrat font-light text-gray-900 mb-6">
+            <h2 className="text-5xl font-montserrat font-light text-gray-900 mb-6">
               Begin Your Wellness Journey
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">

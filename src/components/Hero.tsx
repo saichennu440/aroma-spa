@@ -29,15 +29,15 @@ const Hero: React.FC = () => {
           <h1 className={`text-5xl md:text-7xl lg:text-8xl font-montserrat font-light text-white mb-6 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            Inspired by the Aroma.
+            Inspired by the Aroma
             <br />
-            <span className="text-cream">Created for You.</span>
+            <span className="text-cream">Created for You</span>
           </h1>
           
           <p className={`text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto font-light leading-relaxed transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            Experience transformative wellness through mindful therapies and luxurious self-care in our serene sanctuary.
+            Experience transformative wellness through mindful therapies and luxurious self-care in our serene sanctuary
           </p>
 
           <button

@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
     src="/Aroma_Spa_Footer.jpg"            // <-- put the file name you used in /public here
     alt="Aroma Spa"
     className="h-10 md:h-14 w-auto object-contain mr-2"/>
-              Aroma spa</h3>
+              Aroma Spa</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Inspired by the Aroma. Created for You. Experience Transformative wellness Through 
               Mindful Therapies and Luxurious Self-Care.
@@ -208,7 +208,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="text-center lg:text-right">
               <p className="flex items-center justify-center lg:justify-end text-sm text-gray-400">
-                © 2025 aroma spa. All rights reserved
+                © 2026 aroma spa. All rights reserved
               </p>
             </div>
           </div>
