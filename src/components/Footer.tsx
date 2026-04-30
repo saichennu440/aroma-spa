@@ -219,3 +219,5 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
+// new file: src/components/Footer.tsx
