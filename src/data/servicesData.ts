@@ -156,50 +156,56 @@ const servicesData: ServicesData = {
  facials: {
     'classic-facials': [
       {
-        name: 'Facial Clean-up (Watermelon / Strawberry)',
-        description: 'A burst of hydration/Antioxidant-rich cleanse for tired, stressed skin.',
-        image: '/services/Facials – Clean ups2.webp',
-        variants: [{ duration: '30', price: '₹1200' }]
-      },
-      {
-        name: 'Hydra Dew (Dry & Dehydrated)',
-        description: 'Immerse your delicate skin in exquisite moisture, calming and protecting it with every touch',
+        name: 'Hydra Boost (Dry & Dehydrated)',
+        description: 'Immerseyour delicate skin deeply hydrates, smoothens skin, and restores a radiant glow. Its advanced formula replenishes moisture and enhances brightness for visibly refreshed, plump skin from the very first use.',
         image: '/services/Facials – Hydra Dew.webp',
-        variants: [{ duration: '60', price: '₹1500' }]
+        variants: [{ duration: '60', price: '₹1800' }]
       },
-      {
-        name: 'Rejuvenating\n (All skin types)',
-        description: 'Reveal your skin’s natural radiance through meticulous care that enhances texture, tone, and vitality.',
-        image: '/services/Facials – Rejuvenating2.jpg',
-        variants: [{ duration: '60', price: '₹1700' }]
+        {
+        name: 'Pollution Guard (All Skin Types)',
+        description: 'Specially formulated with activated charcoal and lemon extracts, deeply cleanses, controls excess oil, and unclogs pores which helps the skin balanced and moisturized for all skin types.',
+        image: '/services/Facials – Clean ups2.webp',
+        variants: [{ duration: '60', price: '₹1800' }]
       },
+      // {
+      //   name: 'Rejuvenating\n (All skin types)',
+      //   description: 'Reveal your skin’s natural radiance through meticulous care that enhances texture, tone, and vitality.',
+      //   image: '/services/Facials – Rejuvenating2.jpg',
+      //   variants: [{ duration: '60', price: '₹1700' }]
+      // },
       {
-        name: 'Herbal Pearl',
-        description: 'Indulge in the healing touch of nature’s finest herbs, and reveal skin that feels renewed and luminous.',
+        name: 'Korean Glass',
+        description: 'A premium skincare solution that deeply hydrates and visibly brightens, refining skin texture and improving overall tone. Delivers a radiant, dewy glow with a flawless, translucent “glass skin” finish inspired by Korean skincare.',
         image: '/services/Facials – Herbal Pearl.webp',
-        variants: [{ duration: '60', price: '₹2700' }]
+        variants: [{ duration: '60', price: '₹1800' }]
       }
     ],
 
     'premium-facials': [
-      {
-        name: 'Deep Pore Cleansing (Oily Skin)',
-        description: 'An expertly crafted extract that refreshes oily skin while maintaining its natural balance. Enriched with skin-loving nutrients to smooth, nourish, and reveal a clear, radiant glow.',
-        image: '/services/Facials – Deep Pore Cleansing.webp',
-        variants: [{ duration: '60', price: '₹3100' }]
-      },
-      {
-        name: 'Whitening Facial (Dull & Uneven)',
-        description: 'Harness the power of advanced sun filters to reduce melanin formation, protect against UV rays, and unveil a naturally bright, balanced skin tone.',
-        image: '/services/Facials – Whitening.webp',
+         {
+         name: 'D-Tan Skin Reset Facial (All Skin Types)',
+         description: 'Removes stubborn tan, brightens skin, and restores a natural glow in just one use. It targets pigmentation, dullness, and clogged pores while nourishing the skin for a fresh, even-toned look.',
+         image: '/services/Facials – Rejuvenating2.jpg',
+         variants: [{ duration: '60', price: '₹2800' }]
+       },
+       {
+        name: 'Gold Radiance Facial (Dull & Uneven Skin Tone)',
+        description: 'Deeply nourishes the skin to boost radiance, collagen, and elasticity. It helps reduce fine lines, dullness, and pigmentation while leaving skin firm, smooth, and visibly glowing.',
+        image: '/services/Facials – Herbal Gold.webp',
         variants: [{ duration: '60', price: '₹3300' }]
       },
       {
-        name: 'Herbal Gold (Signature)',
-        description: 'Nature’s touch, meticulously crafted from herbal essences, delivering visible transformation from the first touch.',
-        image: '/services/Facials – Herbal Gold.webp',
-        variants: [{ duration: '60', price: '₹4500' }]
-      }
+        name: 'Diamond Glow Signature Facial',
+        description: 'Transforms dull, tired skin into a crystal-clear, diamond-radiant glow. Deeply polishes, removes impurities, and boosts cell renewal for a fresh, youthful complexion.',
+        image: '/services/Facials – Deep Pore Cleansing.webp',
+        variants: [{ duration: '60', price: '₹3300' }]
+      },
+      {
+        name: 'Wedding Ready Facial ',
+        description: 'Purifies, nourishes, and hydrates for a flawless, picture-perfect glow. Enriched with Cherry Extract and Apricot Oil, it boosts collagen, reduces pigmentation, and enhances natural radiance.',
+        image: '/services/Facials – Whitening.webp',
+        variants: [{ duration: '60', price: '₹3500' }]
+      },
     ]
   },
 
@@ -212,8 +218,8 @@ const servicesData: ServicesData = {
         variants: [{ duration: '60', price: '₹2800' }]
       },
       {
-        name: 'Black Currant Polish (Dry Skin)',
-        description: 'A sumptuous blend of black currant extracts rich in antioxidants to deeply nourish and hydrate parched skin. This luxurious polish restores elasticity, replenishes moisture, and helps slow the signs of aging—leaving your skin supple and youthful.',
+        name: 'Ubtan (All Skin Types)',
+        description: 'A skincare ritual enriched with ubtan, saffron, and natural oils to cleanse, exfoliate, nourish your skin. This helps remove tan, reduce blemishes, and restore a naturally glowing skin.',
         image: '/services/Polishing – Black Current.webp',
         variants: [{ duration: '60', price: '₹4500' }]
       },
@@ -238,19 +244,25 @@ const servicesData: ServicesData = {
         name: 'Classic Pedicure (Watermelon & Litchi)',
         description: 'Delight in the sumptuous blend of fruit essences and revitalizing moisture. Each touch restores suppleness, rejuvenates your skin, and leaves behind an aura of natural vitality and freshness',
         image: '/services/Pedicure – Classic.webp',
-        variants: [{ duration: '60', price: '₹1200' }]
+        variants: [{ duration: '60', price: '₹1700' }]
+      },
+      {
+        name: 'Happy Feet Pedicure (Rosemary & Lavender)',
+        description: 'Refreshes and revitalizes tired feet with natural herbs and essential oils. Enriched with essential oils, it cleanses, exfoliates, and nourishes for soft, smooth skin. ',
+        image: '/services/Pedicure – Happy Feet.jpeg',
+        variants: [{ duration: '60', price: '₹1700' }]
       },
       {
         name: 'Anti-Oxidant Pedicure (Orange & Chocolate)',
         description: 'An indulgent foot treatment crafted to detoxify and invigorate, relieving heaviness and swelling while restoring energy and comfort to fatigued feet',
         image: '/services/Pedicure – Anti-Oxidant.webp',
-        variants: [{ duration: '60', price: '₹1200' }]
+        variants: [{ duration: '60', price: '₹1700' }]
       },
       {
         name: 'Moisturising Exotic Pedicure (Kiwi & Strawberry)',
         description: 'Immerse your feet in a lavish blend of strawberry and kiwi extracts. This exquisite pedicure hydrates, softens, and rejuvenates, leaving your feet velvety smooth and radiant.',
         image: '/services/Pedicure – Moisturising Exotic.webp',
-        variants: [{ duration: '60', price: '₹1400' }]
+        variants: [{ duration: '60', price: '₹1700' }]
       },
       {
         name: 'Brightening De-Tan Pedicure',
