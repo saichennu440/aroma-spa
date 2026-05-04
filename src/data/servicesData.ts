@@ -274,7 +274,7 @@ const servicesData: ServicesData = {
         name: 'De-Stress Refreshment (Cucumber & Peppermint)',
         description: 'Escape into a cooling haven as peppermint awakens and cucumber soothes. This detoxifying ritual releases stress, restores balance, and infuses your feet with a crisp, invigorating freshness.',
         image: '/services/Pedicure – De-Stress Refreshment.webp',
-        variants: [{ duration: '60', price: '₹1500' }]
+        variants: [{ duration: '60', price: '₹1700' }]
       }
     ]//28
   }
