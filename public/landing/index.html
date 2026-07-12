@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aroma Spa Meta Ads Landing Page</title>
+
+<link rel="icon" href="../images/logo.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<style>
+
+:root{
+    --sage:#8BA58B;
+    --sage-dark:#6E8B6E;
+    --cream:#F9F6F0;
+    --text:#2E2E2E;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--cream);
+    overflow-x:hidden;
+}
+
+.hero{
+    height:100vh;
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+}
+.logo{
+    position:absolute;
+    top:20px;
+    left:20px;
+    z-index:100;
+    
+}
+.logo img{
+    width:120px;
+    height:auto;
+}
+
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:10;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:72px;
+    font-weight:300;
+    margin-bottom:25px;
+}
+
+.overlay p{
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.btn{
+    background:var(--sage);
+    color:white;
+    padding:18px 36px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.category{
+    padding: 90px 100px;
+    position: relative;
+}
+
+.category h2{
+    font-size:52px;
+    text-align:center;
+    font-weight:300;
+    margin-bottom:50px;
+}
+
+.swiper-slide{
+    display:flex;
+    height:auto;
+}
+
+.service-card{
+    width:100%;
+    height:690px;
+    background:white;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    transition:.35s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+}
+
+.service-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.content{
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.content h3{
+    height:75px;
+    font-size:22px;
+    line-height:1.3;
+    font-weight:600;
+    display:flex;
+    align-items:flex-start;
+}
+.pedicure-title{
+    min-height:140px !important;
+}
+.content p{
+    height:110px;
+    overflow:hidden;
+
+    display:-webkit-box;
+    -webkit-line-clamp:5;
+    -webkit-box-orient:vertical;
+
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
+}
+
+.prices-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:20px;
+    min-height:100px;
+}
+
+.price-option input{
+    display:none;
+}
+
+.price-card{
+    border:2px solid #e6e6e6;
+    border-radius:16px;
+    padding:16px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.price-option input:checked + .price-card{
+    border-color:var(--sage);
+    background:#f4f8f2;
+}
+
+.whatsapp{
+    width:100%;
+    margin-top:20px;
+    border:none;
+    background:var(--sage);
+    color:white;
+    padding:16px;
+    border-radius:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.map iframe{
+    width:100%;
+    height:500px;
+    border:none;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    width:60px !important;
+    height:60px !important;
+    background:white;
+    border-radius:50%;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    color:#8BA58B !important;
+    top:50%;
+    transform:translateY(-50%);
+    transition:.3s;
+    z-index:100;
+}
+
+.swiper-button-next{
+    right:-70px !important;
+}
+
+.swiper-button-prev{
+    left:-70px !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+    background:#8BA58B;
+    color:white !important;
+    transform:translateY(-50%) scale(1.08);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size:22px !important;
+    font-weight:700;
+}
+
+.therapySwiper,
+.facialSwiper,
+.polishSwiper,
+.pedicureSwiper{
+    overflow: visible !important;
+}
+.location-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:10px 22px;
+    margin-bottom:25px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:50px;
+
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:.5px;
+}
+
+.location-tag::before{
+    font-size:16px;
+}
+
+@media(max-width:768px){
+
+    .overlay h1{
+        font-size:42px;
+    }
+
+    .category{
+        padding:60px 20px;
+    }
+
+    .category h2{
+        font-size:38px;
+        margin-bottom:35px;
+    }
+
+    .swiper-slide{
+        display:flex;
+        justify-content:center;
+    }
+
+      .service-card{
+          width:100%;
+          max-width:320px;
+          height:580px;
+          margin:auto;
+      }
+    .service-card img{
+    height:180px;
+}
+
+    .content h3{
+        height:auto;
+        min-height:55px;
+          font-size:18px;
+          line-height:1.3;
+    }
+
+    .content p{
+        height:auto;
+        min-height:90px;
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .prices-grid{
+    gap:8px;
+}
+
+.price-card{
+    padding:10px;
+    font-size:14px;
+}
+
+.whatsapp{
+    padding:12px;
+    font-size:14px;
+}
+}
+
+@media(max-width:768px){
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        width:45px !important;
+        height:45px !important;
+
+        top:auto !important;
+        bottom:-60px !important;
+
+        transform:none !important;
+    }
+
+    .swiper-button-prev{
+        left:35% !important;
+    }
+
+    .swiper-button-next{
+        right:35% !important;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="logo">
+    <img src="../images/logo.png" alt="Aroma Spa Logo">
+  </div>
+
+<div class="overlay">
+
+    <span class="location-tag">
+        Aroma Spa • Nallagandla, Hyderabad
+    </span>
+
+    <h1>
+        Luxury Spa Experiences
+    </h1>
+
+    <p>
+        Premium Therapies • Facials • Body Polishing • Pedicure
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/919318629318"
+       target="_blank">
+       Explore On WhatsApp
+    </a>
+
+</div>
+
+<div class="swiper heroSwiper">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<img src="../images/hero1.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="../images/hero2.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="../images/hero3.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="../images/hero4.jpg">
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section class="category">
+<h2>Therapies</h2>
+
+<div class="swiper therapySwiper">
+    <div class="swiper-wrapper" id="therapyContainer"></div>
+
+    <div class="swiper-button-prev therapy-prev"></div>
+    <div class="swiper-button-next therapy-next"></div>
+</div>
+</section>
+
+<section class="category">
+<h2>Facials</h2>
+
+<div class="swiper facialSwiper">
+    <div class="swiper-wrapper" id="facialContainer"></div>
+
+    <div class="swiper-button-prev facial-prev"></div>
+    <div class="swiper-button-next facial-next"></div>
+</div>
+</section>
+
+<section class="category">
+<h2>Full Body Polishing</h2>
+
+<div class="swiper polishSwiper">
+    <div class="swiper-wrapper" id="polishContainer"></div>
+
+    <div class="swiper-button-prev polish-prev"></div>
+    <div class="swiper-button-next polish-next"></div>
+</div>
+</section>
+
+<section class="category">
+<h2>Pedicure</h2>
+
+<div class="swiper pedicureSwiper">
+    <div class="swiper-wrapper" id="pedicureContainer"></div>
+
+    <div class="swiper-button-prev pedicure-prev"></div>
+    <div class="swiper-button-next pedicure-next"></div>
+</div>
+</section>
+
+<section class="map">
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7611.850252871066!2d78.2990486935791!3d17.46329740000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93fde0615921%3A0x298fbac9ad2c578b!2sAroma%20Spa!5e0!3m2!1sen!2sin!4v1757660121852!5m2!1sen!2sin"
+loading="lazy">
+</iframe>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+const therapies = [
+{
+name:"Foot Reflexology",
+description:"A calming leg massage that releases built-up tension, promotes circulation, and envelops your legs in soothing relaxation from thigh to toe.",
+image:"/services/Foot Reflexology.webp",
+variants:[{duration:"30",price:1000}]
+},
+{
+name:"Head, Neck & Shoulder",
+description:"Drift into bliss as each precise movement rejuvenates muscles, calms the mind, and restores balance.",
+image:"/services/Head, Neck & Shoulder.webp",
+variants:[{duration:"30",price:1200}]
+},
+{
+name:"Back Revival Therapy",
+description:"Expert techniques paired with aromatic oils release knots and stiffness, leaving you refreshed and renewed.",
+image:"/services/Back Revival Therapy.webp",
+variants:[{duration:"30",price:1700}]
+},
+{
+name:"Swedish Therapy",
+description:"Our Swedish Therapy is a timeless European technique that moves like a slow, soothing current across the body.",
+image:"/services/Swedish Therapy.webp",
+variants:[
+{duration:"60",price:2800},
+{duration:"90",price:3800},
+{duration:"120",price:4500}
+]
+},
+{
+name:"Aromatic Therapy",
+description:"A sensory journey that combines expert massage techniques with pure essential oils.",
+image:"/services/Aromatic Therapy.webp",
+variants:[
+{duration:"60",price:3000},
+{duration:"90",price:4300},
+{duration:"120",price:5300}
+]
+},
+{
+name:"Deep Tissue Therapy",
+description:"A therapeutic massage that targets deep layers of muscle and connective tissue.",
+image:"/services/Deep Tissue Therapy.webp",
+variants:[
+{duration:"60",price:3600},
+{duration:"90",price:4800},
+{duration:"120",price:5800}
+]
+},
+{
+name:"Balinese Therapy",
+description:"Traditional Indonesian healing with acupressure, stretches and rhythmic movements.",
+image:"/services/Balinese Therapy.webp",
+variants:[
+{duration:"60",price:3600},
+{duration:"90",price:4800},
+{duration:"120",price:5800}
+]
+},
+{
+name:"Dry Thai Therapy",
+description:"Ancient therapy using pressure points and assisted stretches without oils.",
+image:"/services/Dry Thai Therapy.webp",
+variants:[
+{duration:"60",price:3600},
+{duration:"90",price:3900},
+{duration:"120",price:4800}
+]
+},
+{
+name:"Herbal Potli Therapy",
+description:"Warm herbal poultices infused with medicinal herbs melt tension and uplift the senses.",
+image:"/services/Herbal Potli Therapy.webp",
+variants:[
+{duration:"60",price:4100},
+{duration:"90",price:5300}
+]
+},
+{
+name:"Hot Stone Therapy",
+description:"Smooth heated stones release deep stress and tension while restoring harmony.",
+image:"/services/Hot Stone Therapy.webp",
+variants:[
+{duration:"60",price:4100},
+{duration:"90",price:5300}
+]
+},
+{
+name:"Signature Therapy",
+description:"A harmonious fusion of traditional and contemporary techniques for complete relaxation.",
+image:"/services/Signature Therapy.webp",
+variants:[
+{duration:"90",price:5300},
+{duration:"120",price:6000}
+]
+},
+{
+name:"Tandem Four Hands Therapy",
+description:"Two therapists working in synchrony deliver unparalleled relaxation and serenity.",
+image:"/services/Tandem (Four Hands) Therapy.webp",
+variants:[
+{duration:"60",price:5300},
+{duration:"90",price:6000}
+]
+}
+];
+
+const facials = [
+{
+name:"Hydra Boost (Dry & Dehydrated)",
+description:"Deeply hydrates, smoothens skin, and restores a radiant glow.",
+image:"/services/Facials – Hydra Dew.webp",
+variants:[{duration:"60",price:1800}]
+},
+{
+name:"Pollution Guard (All Skin Types)",
+description:"Activated charcoal and lemon extracts deeply cleanse and control excess oil.",
+image:"/services/Facials – Clean ups2.webp",
+variants:[{duration:"60",price:1800}]
+},
+{
+name:"Korean Glass",
+description:"Premium glass skin facial inspired by Korean skincare for radiant skin.",
+image:"/services/Facials – Herbal Pearl.webp",
+variants:[{duration:"60",price:1800}]
+},
+{
+name:"D-Tan Skin Reset Facial",
+description:"Removes stubborn tan and restores a natural glow.",
+image:"/services/Facials – Rejuvenating2.jpg",
+variants:[{duration:"60",price:2800}]
+},
+{
+name:"Gold Radiance Facial",
+description:"Boosts radiance, collagen and elasticity while reducing dullness.",
+image:"/services/Facials – Herbal Gold.webp",
+variants:[{duration:"60",price:3300}]
+},
+{
+name:"Diamond Glow Signature Facial",
+description:"Transforms dull skin into a crystal clear radiant glow.",
+image:"/services/Facials – Deep Pore Cleansing.webp",
+variants:[{duration:"60",price:3300}]
+},
+{
+name:"Wedding Ready Facial",
+description:"Purifies, nourishes and hydrates for a flawless picture perfect glow.",
+image:"/services/Facials – Whitening.webp",
+variants:[{duration:"60",price:3500}]
+}
+];
+
+const polishing = [
+{
+name:"Scrub (With Shower)",
+description:"Invigorating exfoliation revealing smooth and renewed skin.",
+image:"/services/Polishing – Scrub.webp",
+variants:[{duration:"60",price:2800}]
+},
+{
+name:"Ubtan (All Skin Types)",
+description:"Traditional ubtan treatment removes tan and restores natural glow.",
+image:"/services/Polishing – Black Current.webp",
+variants:[{duration:"60",price:4500}]
+},
+{
+name:"Chocolate (Brightening & Nourishing)",
+description:"Rich cocoa treatment detoxifies and deeply hydrates skin.",
+image:"/services/Polishing – Chocolate.webp",
+variants:[{duration:"60",price:4500}]
+},
+{
+name:"Orange (De-Tan)",
+description:"Vitamin C rich body polish that brightens and reduces tanning.",
+image:"/services/Polishing – Orange.webp",
+variants:[{duration:"60",price:4500}]
+}
+];
+
+const pedicure = [
+{
+name:"Classic Pedicure (Watermelon & Litchi)",
+description:"Fruit essence pedicure restoring softness and vitality.",
+image:"/services/Pedicure – Classic.webp",
+variants:[{duration:"60",price:1700}]
+},
+{
+name:"Happy Feet Pedicure (Rosemary & Lavender)",
+description:"Natural herbs and oils refresh and revitalize tired feet.",
+image:"/services/Pedicure – Happy Feet.jpeg",
+variants:[{duration:"60",price:1700}]
+},
+{
+name:"Anti-Oxidant Pedicure (Orange & Chocolate)",
+description:"Detoxifying treatment restoring energy and comfort to tired feet.",
+image:"/services/Pedicure – Anti-Oxidant.webp",
+variants:[{duration:"60",price:1700}]
+},
+{
+name:"Moisturising Exotic Pedicure (Kiwi & Strawberry)",
+description:"Hydrates, softens and rejuvenates feet with fruit extracts.",
+image:"/services/Pedicure – Moisturising Exotic.webp",
+variants:[{duration:"60",price:1700}]
+},
+{
+name:"Brightening De-Tan Pedicure",
+description:"Brightens and detoxifies dull tired feet for a radiant finish.",
+image:"/services/Pedicure – Brightening De-Tan.webp",
+variants:[{duration:"60",price:1700}]
+},
+{
+name:"De-Stress Refreshment (Cucumber & Peppermint)",
+description:"Cooling ritual that relieves stress and refreshes tired feet.",
+image:"/services/Pedicure – De-Stress Refreshment.webp",
+variants:[{duration:"60",price:1700}]
+}
+];
+
+function createCard(service){
+
+    const prices =
+    service.variants.map((v,index)=>`
+
+        <label class="price-option">
+
+            <input
+            type="radio"
+            name="${service.name}"
+            value="${v.duration}|${v.price}"
+            ${index===0 ? "checked" : ""}>
+
+            <div class="price-card">
+                <strong>${v.duration} Min</strong>
+                <br>
+                ₹${v.price}
+            </div>
+
+        </label>
+
+    `).join("");
+
+    return `
+
+        <div class="swiper-slide">
+
+            <div class="service-card ${service.category === 'pedicure' ? 'pedicure-card' : ''}">
+
+                <img src="${service.image}"
+                     loading="lazy">
+
+                <div class="content">
+
+                    <h3 class="${
+                        service.name.includes("Pedicure") ||
+                        service.name.includes("Cucumber") ||
+                        service.name.includes("Watermelon")
+                            ? "pedicure-title"
+                            : ""
+                    }">
+                        ${service.name}
+                    </h3>
+
+                    <p>${service.description}</p>
+
+                    <div class="prices-grid">
+                        ${prices}
+                    </div>
+
+                    <button
+                        class="whatsapp"
+                        onclick="ExploreService('${service.name}')">
+                        Explore On WhatsApp
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+}
+
+function renderServices(containerId,services){
+
+    document.getElementById(containerId)
+    .innerHTML =
+    services
+    .map(createCard)
+    .join("");
+}
+
+function ExploreService(serviceName){
+
+    const selected =
+    document.querySelector(
+    `input[name="${serviceName}"]:checked`
+    );
+
+    const [duration,price] =
+    selected.value.split("|");
+
+    const message =
+
+`Hello Aroma Spa,
+
+I would like to Explore:
+
+Service: ${serviceName}
+Duration: ${duration} Minutes
+Price: ₹${price}
+
+Please share available slots.
+
+Thank you.`;
+
+    window.open(
+    `https://wa.me/919318629318?text=${encodeURIComponent(message)}`,
+    "_blank"
+    );
+}
+
+renderServices("therapyContainer",therapies);
+renderServices("facialContainer",facials);
+renderServices("polishContainer",polishing);
+renderServices("pedicureContainer",pedicure);
+
+const sliderOptions={
+    loop:true,
+    spaceBetween:25,
+    autoplay:{
+        delay:3000
+    },
+breakpoints:{
+    0:{
+        slidesPerView:1,
+        spaceBetween:10
+    },
+
+    640:{
+        slidesPerView:1,
+        spaceBetween:20
+    },
+
+    768:{
+        slidesPerView:1.8,
+        spaceBetween:20
+    },
+
+    1024:{
+        slidesPerView:3,
+        spaceBetween:25
+    },
+
+    1400:{
+        slidesPerView:4,
+        spaceBetween:25
+    }
+}
+};
+
+new Swiper(".heroSwiper",{
+    loop:true,
+    autoplay:{
+        delay:2500
+    }
+});
+
+new Swiper(".therapySwiper",{
+    ...sliderOptions,
+    navigation:{
+        nextEl:".therapy-next",
+        prevEl:".therapy-prev"
+    }
+});
+
+new Swiper(".facialSwiper",{
+    ...sliderOptions,
+    navigation:{
+        nextEl:".facial-next",
+        prevEl:".facial-prev"
+    }
+});
+
+new Swiper(".polishSwiper",{
+    ...sliderOptions,
+    navigation:{
+        nextEl:".polish-next",
+        prevEl:".polish-prev"
+    }
+});
+
+new Swiper(".pedicureSwiper",{
+    ...sliderOptions,
+    navigation:{
+        nextEl:".pedicure-next",
+        prevEl:".pedicure-prev"
+    }
+});
+
+</script>
+
+</body>
+</html>
+

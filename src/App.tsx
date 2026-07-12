@@ -31,6 +31,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 import './App.css';
 
+import LandingRedirect from "./pages/LandingRedirect";
+
 const ScrollToTop: React.FC = () => {
   useScrollToTop();
   return null;
@@ -97,6 +99,10 @@ function App() {
               <Route path="/admin/reviews" element={<AdminReviews />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+              <Route
+                path="/landing"
+                element={<LandingRedirect />}
+            />
               
             </Routes>
           </main>
