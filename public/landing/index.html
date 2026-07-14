@@ -141,7 +141,7 @@ body{
 }
 
 .content{
-    padding:24px;
+    padding:20px;
     display:flex;
     flex-direction:column;
     flex:1;
@@ -299,12 +299,13 @@ body{
         justify-content:center;
     }
 
-      .service-card{
-          width:100%;
-          max-width:320px;
-          height:580px;
-          margin:auto;
-      }
+     .service-card{
+    width:100%;
+    max-width:320px;
+    min-height:580px;
+    height:auto;
+    margin:auto;
+}
     .service-card img{
     height:180px;
 }
@@ -335,6 +336,25 @@ body{
 .whatsapp{
     padding:12px;
     font-size:14px;
+}
+
+/* Fix taller Pedicure cards on mobile */
+
+.pedicure-title{
+    min-height:70px !important;
+}
+
+.service-card{
+    display:flex;
+    flex-direction:column;
+}
+
+.content{
+    flex:1;
+}
+
+.whatsapp{
+    margin-top:auto;
 }
 }
 
